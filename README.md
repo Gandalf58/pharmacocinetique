@@ -12,3 +12,4 @@
     2. J’ai déjà ÉSSSAYÉ d’un peu débroussailler les premières formules (les cellules mise en vert dans « pharmaco-eclate-01 ») en PHP, sans formulaire, uniquement pour tester.  
       https://cambier.eu/pharmacocinetique.php  
       Mais j’ai déjà un problème pour ke et ka qui ne donnent pas les valeurs attendues.
+    3. Malgré les modifications du 16/03/21 (il y avait une erreur d'opérateur "puissance"), je n'ai toujours pas les résultats attendus
