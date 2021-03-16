@@ -16,7 +16,7 @@ $Tep = $TpsElim * 10 * $p; // Te émimination
 
 //$ke=SI(Tep;0,5^(1/Tep);1)
 if ( $Tep ) {
-  $ke = 0.5 ^ ( 1 / $Tep );
+  $ke = 0.5 ** ( 1 / $Tep );
 } else {
   $ke = 1;
 }
@@ -55,13 +55,13 @@ for ( $i = 0; $i < 17; $i++ ) {
   $ta = $ta / ( $ta - $a ) * ( $ta * ( $b + 1 - log( $ta ) ) - ( 2 * $a ) ); // Ta absorbtion
 }
 
-$ka0 = 1 / 2 ^ ( 1 / $ta );
-
+$ka0 = 1 / 2 ** ( 1 / $ta );
+$ka1 = 0;
 //$ka1   =SI(Tmaxp=0;0;SI(OU(Tep=0;Tmaxp<0);0,5^(1/ABS(Tmaxp));ka0+SI(ka0=ke;0,00000000000001)))
 if ( $Tmaxp == 0 ) {
   $ka1 = 0;
 } elseif ( $Tep == 0 or $Tmaxp < 0 ) {
-  $ka1 = 0.5 ^ ( 1 / abs( $Tmaxp ) );
+  $ka1 = 0.5 ** ( 1 / abs( $Tmaxp ) );
 } elseif ( $ka0 == $ke ) {
   $ka1 = $ka0 + 0.000000001;
 }
